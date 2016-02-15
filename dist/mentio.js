@@ -865,7 +865,6 @@ angular.module('mentio')
             if (mentionInfo !== undefined) {
                 if (selectedElementIsTextAreaOrInput()) {
                     var myField = getDocument(ctx).activeElement;
-                    text = text + ' ';
                     var startPos = mentionInfo.mentionPosition;
                     var endPos = mentionInfo.mentionPosition + mentionInfo.mentionText.length + 1;
                     myField.value = myField.value.substring(0, startPos) + text +
