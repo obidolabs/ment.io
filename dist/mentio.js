@@ -928,6 +928,7 @@ angular.module('mentio')
                     if (idx >= 0 && c.length + idx === effectiveRange.length) {
                         var prevCharPos = idx - 1;
                         if (idx === 0 || effectiveRange.charAt(prevCharPos) === '\xA0' ||
+                            effectiveRange.charAt(prevCharPos).match(/\r?\n/g) || //Line break
                             effectiveRange.charAt(prevCharPos) === ' ' ) {
 
                             matchInfo = {
